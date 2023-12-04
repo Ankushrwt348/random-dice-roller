@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(30, 80, 71) ;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+        }
+        .play{
+            background-color: rgb(76, 196, 178);
+            height: 80vh;
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+           flex-direction: column;
+        }
+        #diceMat{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         
+        }
+     
+        button{
+            color: white;
+            background-color: rgb(30, 80, 71);
+            margin-top: 60px;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 10px;
+            border: none;
+        }
+        button:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+    <div class="play">
+        <h1>Play</h1>
+
+    <div id="diceMat">
+        <img id="img1"  width="200px" src="dice1.png" alt="dice" />
+
+         <button  onclick="onclic()">roll</button>      
+         <button onclick="window.location.reload()"> reset</button>
+
+    </div>
+</div>
+        <script>
+             
+             function onclic(){
+             var random= Math.floor(Math.random()*6+1)
+             var rimg ='dice' +  random + '.png'
+             document.getElementById("img1").src= rimg;
+            }
+        
+        </script>
+
+</body>
+</html>
